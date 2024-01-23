@@ -133,15 +133,20 @@ const controlAddRecipe = async function(newRecipe) {
   }
 }
 
+const newFeature = function () {
+  console.log('welcome to new feature');
+};
+
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   receipeView.addHandlerRender(controlRecipes);
   receipeView.addHandlerUpdateServings(controlServings);
-  receipeView.addHandlerAddBookmark(controlAddBookmarks)
-  searchView.addHandlerSearch(controlSearchResult);   //
+  receipeView.addHandlerAddBookmark(controlAddBookmarks);
+  searchView.addHandlerSearch(controlSearchResult); //
   paginationView.addHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
   console.log('Welcomes');
+  newFeature();
   //controlServings();
 };
 console.log('init()')
